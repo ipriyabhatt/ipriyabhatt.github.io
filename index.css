@@ -1,0 +1,1707 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('http://fonts.cdnfonts.com/css/brittany-signature');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+} 
+body{
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+    overflow-x: hidden;
+    background-color: rgb(20, 20, 20);
+    font-family: "Poppins", sans-serif;
+  scrollbar-color: 2px solid pink;
+}
+
+
+nav{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background: #1b1b1b;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+  }
+  nav .logo{
+    color:rgba(255, 255, 255, 0.5);
+    font-size: 35px;
+    font-weight: 600;
+    font-family:'Brittany Signature', sans-serif;
+  }
+  nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+  nav ul li{
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    color: rgb(219, 219, 219);
+    text-decoration: underline #4e00bb;
+  }
+  nav .menu-btn i{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+  }
+  input[type="checkbox"]{
+    display: none;
+  }
+  @media (max-width: 1000px){
+    nav{
+      padding: 0 40px 0 50px;
+    }
+  }
+  @media (max-width: 920px) {
+    nav .menu-btn i{
+      display: block;
+    }
+    #click:checked ~ .menu-btn i:before{
+      content: "\f00d";
+    }
+    nav ul{
+      z-index: 10;
+      position: fixed;
+      top: 80px;
+      left: -100%;
+      background: #111;
+      height: 100vh;
+      width: 100%;
+      text-align: center;
+      display: block;
+      transition: all 0.3s ease;
+    }
+    #click:checked ~ ul{
+      left: 0;
+    }
+    nav ul li{
+      width: 100%;
+      margin: 40px 0;
+    }
+    nav ul li a{
+      width: 100%;
+      margin-left: -100%;
+      display: block;
+      font-size: 20px;
+      transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    #click:checked ~ ul li a{
+      margin-left: 0px;
+    }
+    nav ul li a.active,
+    nav ul li a:hover{
+      background: none;
+      color: rgb(196, 196, 196);
+    }
+  }
+  .text .header {
+    font-weight: bold;
+  }
+  
+  .text {
+    color: white;
+    font-size: 25px;
+    top: 40%;
+    left: 62%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+  }
+  
+  
+  h3{
+      color: white;
+      margin-left: 55%;
+   
+    font-size: 45px;
+    margin-top: 1%;
+  
+    font-size: 24px;
+    font-weight: 200;
+  }
+.img img{
+    margin-left: 33px;
+    width: 40%;
+    margin-top: 65px;
+  }
+
+@media screen and (max-width:430px) {
+  .text{
+    width: 86%;
+    top: 41%;
+    left: 60%;
+   
+  }
+  .img img{
+    margin-left: 17%;
+  }
+ 
+}
+
+  
+  .animated-text span {
+    display: none;
+    line-height: 1;
+  }
+  
+  .animated-text span.active {
+    display: inline;
+  }
+  
+  .animated-text:after {
+    content: ".";
+    display: inline;
+    width: 6px;
+    text-indent: 0;
+    background: var(--col-icon);
+    animation: blink 0.3s infinite alternate;
+  }
+  .datawords{
+    white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+  }
+  
+  @keyframes blink {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+
+  .center img{
+    height: 32%;
+    width: 40%;
+    border-radius: 900px;
+    margin-left: 2%;
+    margin-top: 26px;
+    margin-bottom: -35px;
+}
+@media  screen and (max-width:450px) {
+  video{
+    top:10px;
+  }
+  
+}
+@keyframes move {
+  100% {
+      transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
+
+
+
+.background span {
+  width: 4vmin;
+  height: 4vmin;
+  border-radius: 4vmin;
+  backface-visibility: hidden;
+  position: absolute;
+  animation: move;
+  animation-duration: 45;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+
+.background span:nth-child(0) {
+  color: #c83c66;
+  top: 22%;
+  left: 72%;
+  animation-duration: 14s;
+  animation-delay: -43s;
+  transform-origin: 10vw 11vh;
+  box-shadow: 8vmin 0 1.1807940208004466vmin currentColor;
+}
+.background span:nth-child(1) {
+  color: #c83c66;
+  top: 24%;
+  left: 80%;
+  animation-duration: 9s;
+  animation-delay: -44s;
+  transform-origin: 13vw -9vh;
+  box-shadow: 8vmin 0 1.800912768840518vmin currentColor;
+}
+.background span:nth-child(2) {
+  color: #FFACAC;
+  top: 92%;
+  left: 68%;
+  animation-duration: 51s;
+  animation-delay: -39s;
+  transform-origin: 18vw 9vh;
+  box-shadow: 8vmin 0 1.348993437966903vmin currentColor;
+}
+.background span:nth-child(3) {
+  color: #c83c66;
+  top: 91%;
+  left: 25%;
+  animation-duration: 6s;
+  animation-delay: -9s;
+  transform-origin: -6vw 15vh;
+  box-shadow: -8vmin 0 1.1254648817176487vmin currentColor;
+}
+.background span:nth-child(4) {
+  color: #c83c66;
+  top: 37%;
+  left: 10%;
+  animation-duration: 23s;
+  animation-delay: -49s;
+  transform-origin: 21vw 12vh;
+  box-shadow: 8vmin 0 1.8009124535551486vmin currentColor;
+}
+.background span:nth-child(5) {
+  color: #6340a0;
+  top: 96%;
+  left: 48%;
+  animation-duration: 22s;
+  animation-delay: -50s;
+  transform-origin: -20vw -7vh;
+  box-shadow: -8vmin 0 1.613681300849112vmin currentColor;
+}
+.background span:nth-child(6) {
+  color: #c83c66;
+  top: 39%;
+  left: 26%;
+  animation-duration: 41s;
+  animation-delay: -38s;
+  transform-origin: -15vw -19vh;
+  box-shadow: -8vmin 0 1.1079546401025977vmin currentColor;
+}
+.background span:nth-child(7) {
+  color: #6340a0;
+  top: 9%;
+  left: 14%;
+  animation-duration: 7s;
+  animation-delay: -11s;
+  transform-origin: -12vw 16vh;
+  box-shadow: -8vmin 0 1.969713146950429vmin currentColor;
+}
+.background span:nth-child(8) {
+  color: #FFACAC;
+  top: 16%;
+  left: 89%;
+  animation-duration: 13s;
+  animation-delay: -50s;
+  transform-origin: 16vw -9vh;
+  box-shadow: 8vmin 0 1.5099695933734754vmin currentColor;
+}
+.background span:nth-child(9) {
+  color: #c83c66;
+  top: 31%;
+  left: 41%;
+  animation-duration: 24s;
+  animation-delay: -17s;
+  transform-origin: 3vw -23vh;
+  box-shadow: 8vmin 0 1.853190227546509vmin currentColor;
+}
+.background span:nth-child(10) {
+  color: #FFACAC;
+  top: 79%;
+  left: 64%;
+  animation-duration: 29s;
+  animation-delay: -25s;
+  transform-origin: -9vw -22vh;
+  box-shadow: 8vmin 0 1.4124552248250746vmin currentColor;
+}
+.background span:nth-child(11) {
+  color: #6340a0;
+  top: 65%;
+  left: 65%;
+  animation-duration: 29s;
+  animation-delay: -12s;
+  transform-origin: -13vw 23vh;
+  box-shadow: -8vmin 0 1.366924115845901vmin currentColor;
+}
+.background span:nth-child(12) {
+  color: #c83c66;
+  top: 30%;
+  left: 80%;
+  animation-duration: 42s;
+  animation-delay: -26s;
+  transform-origin: -12vw 24vh;
+  box-shadow: 8vmin 0 1.1211371228921063vmin currentColor;
+}
+.background span:nth-child(13) {
+  color: #6340a0;
+  top: 42%;
+  left: 1%;
+  animation-duration: 29s;
+  animation-delay: -18s;
+  transform-origin: -14vw 1vh;
+  box-shadow: -8vmin 0 1.5126893750539563vmin currentColor;
+}
+.background span:nth-child(14) {
+  color: #c83c66;
+  top: 36%;
+  left: 74%;
+  animation-duration: 16s;
+  animation-delay: -23s;
+  transform-origin: 2vw 3vh;
+  box-shadow: -8vmin 0 1.1010960477244764vmin currentColor;
+}
+.background span:nth-child(15) {
+  color: #c83c66;
+  top: 92%;
+  left: 12%;
+  animation-duration: 50s;
+  animation-delay: -19s;
+  transform-origin: -18vw 1vh;
+  box-shadow: 8vmin 0 1.7995410373207776vmin currentColor;
+}
+.background span:nth-child(16) {
+  color: #6340a0;
+  top: 5%;
+  left: 57%;
+  animation-duration: 19s;
+  animation-delay: -17s;
+  transform-origin: -13vw -2vh;
+  box-shadow: 8vmin 0 1.9024514776143704vmin currentColor;
+}
+.background span:nth-child(17) {
+  color: #c83c66;
+  top: 80%;
+  left: 51%;
+  animation-duration: 19s;
+  animation-delay: -35s;
+  transform-origin: 10vw 13vh;
+  box-shadow: 8vmin 0 1.370651507411221vmin currentColor;
+}
+.background span:nth-child(18) {
+  color: #c83c66;
+  top: 32%;
+  left: 50%;
+  animation-duration: 34s;
+  animation-delay: -26s;
+  transform-origin: 25vw 5vh;
+  box-shadow: -8vmin 0 1.6664598924481477vmin currentColor;
+}
+.background span:nth-child(19) {
+  color: #6340a0;
+  top: 21%;
+  left: 37%;
+  animation-duration: 9s;
+  animation-delay: -19s;
+  transform-origin: -14vw 2vh;
+  box-shadow: -8vmin 0 1.3005580892701138vmin currentColor;
+}
+
+
+
+/*Social icons*/
+
+:root {
+  --link-size: 64px;
+  --trans-props: all 0.2s ease;
+  --link-size-footer-b: 40px;
+  --link-size-footer-s: 30px;
+}
+
+a.socialicon {
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons {
+  margin-left: -313px;
+  margin-top: 0px;
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+.socialicon{
+  
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: var(--link-size);
+  height: var(--link-size);
+  background-color: #1f1e1e;
+  margin: 8px;
+  border-radius: 50%;
+  box-shadow: 2px 5px 5px var(--shadow-col);
+  text-decoration: none;
+  transition: var(--trans-props);
+}
+.socialicon i {
+  margin: auto;
+  font-size: 24px;
+  z-index: 1;
+  transition: var(--trans-props);
+}
+
+/* Social icon in dark mode */
+html[light-mode="dark"] .socialicon{
+  background-color: #141516;
+}
+
+.kaggle i {
+  margin: auto;
+  font-size: 24px;
+  z-index: 1;
+  transition: var(--trans-props);
+}
+
+.socialicon.kaggle{
+  color:var(--col-icon-kaggle);
+}
+
+.socialicon:after {
+  content: "";
+  width: var(--link-size);
+  height: var(--link-size);
+  position: absolute;
+  transform: translate(0, var(--link-size));
+  border-radius: 50%;
+  transition: var(--trans-props);
+  
+}
+
+.socialicon.kaggle:after {
+  background-color: #41aff3;
+  box-shadow: var(--kaggle);
+}
+
+
+ /*
+---------------------------
+   LINKEDIN MICROANIMATION
+---------------------------
+*/
+
+ .linkedin-icon{
+  margin-left: 15px;
+}
+.linkedin:hover .linkedin-icon>rect{
+  animation: rect-up 0.3s linear infinite;
+}
+
+
+@keyframes rect-up {
+  50% {
+      y:10px;
+      height:11px;
+   }
+  0%{
+      y:13px;
+      height:8px;  
+      }
+  
+}
+
+.linkedin:hover .linkedin-icon> circle{
+  animation: bounce 0.4s linear infinite;
+}
+
+@keyframes bounce {
+  75% {
+      cy: 8px;
+   }
+   50%{
+      cy: 4px
+   }
+  0%{
+      cy:4px
+      }
+  
+}
+
+/*
+---------------------------
+   INSTAGRAM MICROANIMATION
+---------------------------
+*/
+
+.instagram-icon {
+  width: 90px !important;
+ 
+}
+.st0 {
+  fill:none;
+  stroke:#EF4649;
+  stroke-width:7;
+  stroke-linecap:round;
+  stroke-miterlimit:10;
+}
+
+.instagram:hover #littleCircle {
+  stroke-dasharray:150;
+}
+
+.instagram #shutter{
+  display:none;
+}
+.instagram:hover #shutter{
+  display: block;
+  animation: shutter 1s linear infinite;
+}
+.instagram:hover #lens{
+  fill:#EF4649;
+  animation: lens 1.5s linear infinite;
+
+}
+
+@keyframes shutter {
+  0%, 50% {
+          stroke-dashoffset: 150;
+          
+      }
+  75% {
+          fill:#EF4649;
+          stroke-dashoffset: 0;
+          stroke-width:11;
+      }
+}
+
+@keyframes lens {
+  0%, 75% {
+          opacity: 0;
+      }
+  100% {
+          opacity: 1;
+      }
+}
+
+
+/*
+---------------------------
+   TWITTER MICROANIMATION
+---------------------------
+*/
+.twitter-icon{
+  width: 40px;
+  margin-left: 12px;
+}
+
+.twitter:hover #wing1{
+      transform-origin:center;
+      animation: flap 0.4s ease-out infinite alternate;
+   }	
+   
+.twitter:hover #wing2{
+    transform-origin:center;
+    animation: flap 0.4s ease-in infinite alternate;
+ }		
+
+@keyframes flap{
+     50%{
+      transform:scaleX(-1) rotate(-45deg) translate(-40px,-40px);
+     }
+   }
+
+/*
+--------------------------
+   GITHUB MICROANIMATION
+--------------------------
+*/
+html[light-mode="dark"] .github-icon{
+  fill: #ffff;
+}
+
+.github-icon {
+  width: 40px;
+  margin-left: 12px;
+  margin-top: 5px;
+  fill: #000000;
+}
+
+.github:hover #arm {
+  transform-origin: bottom right;
+  animation: moveArm 1s infinite alternate;
+}
+
+@keyframes moveArm {
+  0% { transform: rotate(10deg); }
+  100% { transform: rotate(-10deg); }
+ }
+
+ /*
+  
+----------------------------
+   SOCIAL MEDIA ANIMATIONS
+----------------------------
+*/
+
+.socialicon:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.16);
+}
+.socialicon:hover:after {
+  transform: translate(0) scale(1.2);
+}
+.socialicon:hover i {
+  color: #fff;
+}
+a:hover {
+  color: transparent;
+}
+.twitter:hover #wing1 {
+  transform-origin: center;
+  animation: flap 0.4s ease-out infinite alternate;
+}
+
+.twitter:hover #wing2 {
+  transform-origin: center;
+  animation: flap 0.4s ease-in infinite alternate;
+}
+
+@keyframes flap {
+  50% {
+      transform: scaleX(-1) rotate(-45deg) translate(-40px, -40px);
+  }
+}
+
+
+/*
+-----------------------------
+ LINKEDIN MICROANIMATION
+-----------------------------
+*/
+
+.linkedin:hover .linkedin-icon-footer>rect {
+  animation: rect-up 0.3s linear infinite;
+}
+
+@keyframes rect-up {
+  50% {
+      y: 10px;
+      height: 11px;
+  }
+  0% {
+      y: 13px;
+      height: 8px;
+  }
+}
+
+.linkedin:hover .linkedin-icon-footer>circle {
+  animation: bounce 0.4s linear infinite;
+}
+
+@keyframes bounce {
+  75% {
+      cy: 8px;
+  }
+  50% {
+      cy: 4px
+  }
+  0% {
+      cy: 4px
+  }
+}
+
+
+/*
+-----------------------------
+ INSTAGRAM MICROANIMATION
+-----------------------------
+*/
+
+.st0 {
+  fill: none;
+  stroke: #EF4649;
+  stroke-width: 7;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+
+.instagram-icon-footer:hover #littleCircle {
+  stroke-dasharray: 150;
+}
+
+.instagram #shutter {
+  display: none;
+}
+
+.instagram-icon-footer:hover #shutter {
+  display: block;
+  animation: shutter 1s linear infinite;
+}
+
+.instagram-icon-footer:hover #lens {
+  fill: #EF4649;
+  animation: lens 1.5s linear infinite;
+}
+
+@keyframes shutter {
+  0%,
+  50% {
+      stroke-dashoffset: 150;
+  }
+  75% {
+      fill: #EF4649;
+      stroke-dashoffset: 0;
+      stroke-width: 11;
+  }
+}
+
+@keyframes lens {
+  0%,
+  75% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+
+/*
+-----------------------------
+ GITHUB MICROANIMATION
+-----------------------------
+*/
+
+.github:hover #arm {
+  transform-origin: bottom right;
+  animation: moveArm 1s infinite alternate;
+}
+
+@keyframes moveArm {
+  0% {
+      transform: rotate(10deg);
+  }
+  100% {
+      transform: rotate(-10deg);
+  }
+}
+
+
+/* twitter SVG micro animation */
+
+.twitter-icon-footer {
+  margin-bottom: 6px;
+  width: 35px;
+}
+
+
+/* linkedin SVG micro animation */
+
+.linkedin-icon-footer {
+  margin-bottom: 8px;
+  width: 30px;
+}
+
+
+/* instagram SVG micro animation */
+
+.instagram-icon-footer {
+  width: 70px;
+  padding-right: 24px;
+  padding-bottom: 8px;
+}
+
+
+/* github SVG Micro animation */
+
+.github-icon-footer {
+  margin-bottom: 8px;
+  width: 35px;
+}
+
+
+/*
+----------------------------------------
+ HOVER EFFECT ON SOCIAL MEDIA ICONS
+----------------------------------------
+*/
+
+.rounded-social-buttons .social-button.twitter {
+  background: #2b2a2A;
+  box-shadow: 10px 10px 5px rgb(0 0 0 / 20%);
+}
+
+.rounded-social-buttons .social-button.twitter:hover,
+.rounded-social-buttons .social-button.twitter:focus {
+  color: #000;
+  background: #2b2a2A;
+}
+
+.rounded-social-buttons .social-button.linkedin {
+  background: #2b2a2A;
+  box-shadow: 10px 10px 5px rgb(0 0 0 / 20%);
+}
+
+.rounded-social-buttons .social-button.linkedin:hover,
+.rounded-social-buttons .social-button.linkedin:focus {
+  color: #000;
+  background: #2b2a2A;
+}
+
+.rounded-social-buttons .social-button.instagram {
+  background: #2b2a2A;
+  box-shadow: 10px 10px 5px rgb(0 0 0 / 20%);
+}
+
+.rounded-social-buttons .social-button.instagram:hover,
+.rounded-social-buttons .social-button.instagram:focus {
+  color: #000;
+  background: #2b2a2A;
+}
+
+.rounded-social-buttons .social-button.github {
+  fill: #ffff;
+  background: #2b2a2A;
+  box-shadow: 10px 10px 5px rgb(0 0 0 / 20%);
+}
+
+.rounded-social-buttons .social-button.github:hover,
+.rounded-social-buttons .social-button.github:focus {
+  color: #000000;
+  background: #2b2a2A;
+}
+
+   
+
+
+
+
+.wrapper{
+  display: flex;
+}
+.wrapper .static-txt{
+  color: #fff;
+  margin-top: 24px;
+  font-size: 30px;
+  font-weight: 300;
+  margin-left: -140px;
+  width: 118px;
+}
+.wrapper .dynamic-txts{
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+
+}
+@media screen and (max-width:420px){
+  .wrapper .static-txt{
+    margin-top: 27px;
+
+    width: 64%;
+    margin-left: -54px;
+    font-size: 27px;
+  }
+  .wrapper .dynamic-txts{
+    margin-left: -71px;
+    
+  }
+  .center img{
+    margin-left: 14%;
+  }
+  .dynamic-txts li{
+    font-size: 20px;
+    margin-top: 2.5px;
+    margin-left: 82px;
+  }
+  .social-icons{
+    margin-left: -115px;
+  }
+ .dynamic-txts li span::after{
+   display: none;
+ }
+}
+.dynamic-txts li{
+  list-style: none;
+  color:#ededed;
+  font-size: 30px;
+  font-weight: 300;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@media screen and (max-width:389px){
+  .wrapper .static-txt{
+    margin-top: 30px;
+
+    width: 64%;
+    margin-left: -54px;
+    font-size: 27px;
+  }
+  .wrapper .dynamic-txts{
+    margin-left: -71px;
+    
+  }
+  .center img{
+    margin-left: 14%;
+  }
+  .dynamic-txts li{
+    font-size: 20px;
+    margin-top: 2.5px;
+    margin-left: 82px;
+  }
+  .social-icons{
+    margin-left: -115px;
+  }
+ .dynamic-txts li span::after{
+   display: none;
+ }
+}
+
+
+
+
+
+.dynamic-txts li{
+  list-style: none;
+  color:#ededed;
+  font-size: 30px;
+  font-weight: 300;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+.dynamic-txts li span{
+  position: relative;
+  margin: 5px 0;
+ 
+  line-height: 90px;
+}
+.dynamic-txts li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin-top: 24px;
+  border-left: 2px solid #FC6D6D;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
+ 
+}
+
+
+
+
+
+
+
+/*
+------------------------
+  FOOTER SECTION
+------------------------
+*/
+
+
+/* Also have a look at the scroll to top button if changing footer's height (below upArrow in app.js) */
+
+.footer {
+  padding-top: 10px;
+  font-family: "Poppins", sans-serif;
+  background-color: #121212;
+}
+
+.tag {
+  font-family: "Poppins", sans-serif;
+  font: size 20px;
+  line-height: 26px;
+  text-align: center;
+  color: #fff;
+  height: 78px;
+  margin: 5px auto 0px;
+  display: block;
+  box-sizing: border-box;
+}
+
+.svg-inline--fa {
+  vertical-align: -0.200em;
+}
+
+.rounded-social-buttons .social-button {
+  display: inline-block;
+  cursor: pointer;
+  width: 3.125rem;
+  height: 3.125rem;
+  border: 0.125rem solid transparent;
+  padding: 0;
+  text-decoration: none;
+  text-align: center;
+  color: #fefefe;
+  font-size: 1.5625rem;
+  font-weight: normal;
+  line-height: 2em;
+  border-radius: 1.6875rem;
+  transition: all 0.5s ease;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+
+/********
+Rotate Transition in foote Soical Icon
+*********/
+
+.rounded-social-buttons .social-button:hover,
+.rounded-social-buttons .social-button:focus {
+  transition: background-color 0.3s, var(--trans-props);
+}
+
+
+/*
+------------------------------
+ TWITTER MICROANIMATION
+-------------------------------
+*/
+
+.twitter:hover #wing1 {
+  transform-origin: center;
+  animation: flap 0.4s ease-out infinite alternate;
+}
+
+.twitter:hover #wing2 {
+  transform-origin: center;
+  animation: flap 0.4s ease-in infinite alternate;
+}
+
+@keyframes flap {
+  50% {
+      transform: scaleX(-1) rotate(-45deg) translate(-40px, -40px);
+  }
+}
+
+
+/*
+-----------------------------
+ LINKEDIN MICROANIMATION
+-----------------------------
+*/
+
+.linkedin:hover .linkedin-icon-footer>rect {
+  animation: rect-up 0.3s linear infinite;
+}
+
+@keyframes rect-up {
+  50% {
+      y: 10px;
+      height: 11px;
+  }
+  0% {
+      y: 13px;
+      height: 8px;
+  }
+}
+
+.linkedin:hover .linkedin-icon-footer>circle {
+  animation: bounce 0.4s linear infinite;
+}
+
+@keyframes bounce {
+  75% {
+      cy: 8px;
+  }
+  50% {
+      cy: 4px
+  }
+  0% {
+      cy: 4px
+  }
+}
+
+
+/*
+-----------------------------
+ INSTAGRAM MICROANIMATION
+-----------------------------
+*/
+
+.st0 {
+  fill: none;
+  stroke: #EF4649;
+  stroke-width: 7;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+
+.instagram-icon-footer:hover #littleCircle {
+  stroke-dasharray: 150;
+}
+
+.instagram #shutter {
+  display: none;
+}
+
+.instagram-icon-footer:hover #shutter {
+  display: block;
+  animation: shutter 1s linear infinite;
+}
+
+.instagram-icon-footer:hover #lens {
+  fill: #EF4649;
+  animation: lens 1.5s linear infinite;
+}
+
+@keyframes shutter {
+  0%,
+  50% {
+      stroke-dashoffset: 150;
+  }
+  75% {
+      fill: #EF4649;
+      stroke-dashoffset: 0;
+      stroke-width: 11;
+  }
+}
+
+@keyframes lens {
+  0%,
+  75% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+
+/*
+-----------------------------
+ GITHUB MICROANIMATION
+-----------------------------
+*/
+
+.github:hover #arm {
+  transform-origin: bottom right;
+  animation: moveArm 1s infinite alternate;
+}
+
+@keyframes moveArm {
+  0% {
+      transform: rotate(10deg);
+  }
+  100% {
+      transform: rotate(-10deg);
+  }
+}
+
+
+/* twitter SVG micro animation */
+
+.twitter-icon-footer {
+  margin-bottom: 6px;
+  width: 35px;
+}
+
+
+/* linkedin SVG micro animation */
+
+.linkedin-icon-footer {
+  margin-bottom: 8px;
+  width: 30px;
+}
+
+
+/* instagram SVG micro animation */
+
+.instagram-icon-footer {
+  width: 70px;
+  padding-right: 24px;
+  padding-bottom: 8px;
+}
+
+
+/* github SVG Micro animation */
+
+.github-icon-footer {
+  margin-bottom: 8px;
+  width: 35px;
+}
+
+
+/*
+----------------------------------------
+ HOVER EFFECT ON SOCIAL MEDIA ICONS
+----------------------------------------
+*/
+
+.rounded-social-buttons .social-button.twitter {
+  background: #2b2a2A;
+  box-shadow: 10px 10px 5px rgb(0 0 0 / 20%);
+}
+
+.rounded-social-buttons .social-button.twitter:hover,
+.rounded-social-buttons .social-button.twitter:focus {
+  color: #000;
+  background: #2b2a2A;
+}
+
+.rounded-social-buttons .social-button.linkedin {
+  background: #2b2a2A;
+  box-shadow: 10px 10px 5px rgb(0 0 0 / 20%);
+}
+
+.rounded-social-buttons .social-button.linkedin:hover,
+.rounded-social-buttons .social-button.linkedin:focus {
+  color: #000;
+  background: #2b2a2A;
+}
+
+.rounded-social-buttons .social-button.instagram {
+  background: #2b2a2A;
+  box-shadow: 10px 10px 5px rgb(0 0 0 / 20%);
+}
+
+.rounded-social-buttons .social-button.instagram:hover,
+.rounded-social-buttons .social-button.instagram:focus {
+  color: #000;
+  background: #2b2a2A;
+}
+
+.rounded-social-buttons .social-button.github {
+  fill: #ffff;
+  background: #2b2a2A;
+  box-shadow: 10px 10px 5px rgb(0 0 0 / 20%);
+}
+
+.rounded-social-buttons .social-button.github:hover,
+.rounded-social-buttons .social-button.github:focus {
+  color: #000000;
+  background: #2b2a2A;
+}
+
+
+/************
+Contact Form In Footer
+*************/
+
+.display {
+  height: auto;
+  width: auto;
+  text-align: left;
+  color: #fff;
+  display: inline;
+  font-size: 25px;
+  font-weight: 200;
+  line-height: 22px;
+  border-bottom: 3px solid #bb86fc;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+form {
+  margin: 15px auto;
+  color: #000;
+}
+
+
+/*
+-------------------
+ Footer Form
+--------------------
+*/
+
+.form-style-6 {
+  font: 95% Arial, Helvetica, sans-serif;
+  max-width: 400px;
+  margin: 10px auto;
+  padding: 16px;
+  border-radius: 2px;
+}
+
+.form-style-6 h1 {
+  background: #bb86fc;
+  font-size: 140%;
+  font-weight: 300;
+  text-align: center;
+  color: #fff;
+  margin: -16px -16px 16px -16px;
+}
+
+.form-style-6 input[type="text"],
+.form-style-6 input[type="date"],
+.form-style-6 input[type="datetime"],
+.form-style-6 input[type="email"],
+.form-style-6 input[type="number"],
+.form-style-6 input[type="search"],
+.form-style-6 input[type="time"],
+.form-style-6 input[type="url"],
+.form-style-6 textarea,
+.form-style-6 select {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 100%;
+  background: transparent;
+  margin-bottom: 4%;
+  border: #000;
+  border-bottom: 2px solid #bb86fc;
+  padding: 3%;
+  color: rgb(107, 105, 105);
+  font: 95% Arial, Helvetica, sans-serif;
+  border-radius: 2px;
+}
+
+.form-style-6 input[type="text"]:focus,
+.form-style-6 input[type="date"]:focus,
+.form-style-6 input[type="datetime"]:focus,
+.form-style-6 input[type="email"]:focus,
+.form-style-6 input[type="number"]:focus,
+.form-style-6 input[type="search"]:focus,
+.form-style-6 input[type="time"]:focus,
+.form-style-6 input[type="url"]:focus,
+.form-style-6 textarea:focus,
+.form-style-6 select:focus {
+  box-shadow: 0 0 5px #bb86fc;
+  padding: 3%;
+  border: 1px solid #bb86fc;
+  border-radius: 2px;
+}
+
+.form-style-6 input[type="submit"],
+.form-style-6 input[type="button"] {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 3%;
+  background: #bb86fc;
+  border-bottom: 2px solid #bb86fc;
+  border-radius: 23px;
+  border-top-style: none;
+  border-right-style: none;
+  border-left-style: none;
+  color: #fff;
+  font-size: 20px;
+}
+
+.form-style-6 input[type="submit"]:hover,
+.form-style-6 input[type="button"]:hover {
+  background:#6a00bbd2;;
+
+}
+
+.form-comtainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer hr {
+  background-color: rgb(37, 51, 46);
+  height: 1.5px;
+}
+
+
+/* to make the navbar open full screen on mobile */
+
+@media (max-width: 768px) {
+  .collapse navbar-collapse {
+      display: flex;
+      justify-content: center;
+  }
+  .footer {
+      padding-top: 10px;
+  }
+  #navbar-content {
+      margin-top: -200px;
+      height: 120vh;
+      text-align: center;
+      transform: translateY(25%);
+  }
+  #btnScrollToTop {
+      display: none;
+  }
+}
+
+@media (max-width: 414px) {
+  .collapse navbar-collapse {
+      display: flex;
+      justify-content: center;
+  }
+  .social-icons{
+    margin-left: -106px;
+  }
+  #navbar-content {
+      margin-top: -180px;
+      height: 120vh;
+      text-align: center;
+      transform: translateY(25%);
+  }
+  #btnScrollToTop {
+      display: none;
+  }
+}
+
+@media (max-width: 375px) {
+  .collapse navbar-collapse {
+      display: flex;
+      justify-content: center;
+  }
+  #navbar-content {
+      margin-top: -180px;
+      height: 120vh;
+      text-align: center;
+      transform: translateY(25%);
+  }
+  #btnScrollToTop {
+      display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .collapse navbar-collapse {
+      display: flex;
+      justify-content: center;
+  }
+  #navbar-content {
+      margin-top: -140px;
+      height: 130vh;
+      text-align: center;
+      transform: translateY(25%);
+  }
+  .footer {
+      margin-top: 6rem;
+  }
+  #btnScrollToTop {
+      display: none;
+  }
+}
+
+
+/* box shadow for profile picture */
+
+.rounded-circle {
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+  -khtml-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+}
+/*
+----------------------------
+Send button micro animation
+----------------------------
+*/
+
+#main {
+  position: relative;
+  margin-left: 4rem;
+  width: 270px;
+  
+}
+ button{
+width: 15rem;
+height: 2.5rem;
+outline: none;
+}
+#lnch :hover{
+    cursor: pointer;
+    outline: none;
+    
+}
+#lnch {
+  font-size: 25px;
+  color: #fff;
+  line-height: 1;
+  /* padding: 20px 25px; */
+  text-align: center;
+  border-radius: 50px;
+  border-style: none;
+  transition: 0.5s ease background-color, 0.5s ease box-shadow;
+  background: #bb86fc;
+}
+#lnch_btn {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  font-size: 22px;
+  line-height: 1;
+  color: #fff;
+ padding: 10px 50px;
+  cursor: pointer;
+  transition: 0.3s ease transform;
+}
+#lnch.launching {
+  background-color: #f39c12;
+  box-shadow: 0 10px 20px -6px #f39c12;
+}
+#lnch_btn.launching {
+  transform: rotateZ(-90deg);
+  animation: shake 0.3s ease 0.5s infinite;
+}
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0) rotateZ(-90deg);
+  }
+  20%,
+  80% {
+    transform: translate3d(1px, 0, 0) rotateZ(-90deg);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-1px, 0, 0) rotateZ(-90deg);
+  }
+  40%,
+  60% {
+    transform: translate3d(1px, 0, 0) rotateZ(-90deg);
+  }
+}
+
+#lnch.launched {
+  background-color: #27ae60;
+  box-shadow: 0 10px 20px -6px #27ae60;
+}
+
+#lnch_btn.launched {
+  transform: rotateZ(-90deg);
+  animation: moveUp 1s ease 0s forwards;
+}
+@keyframes moveUp {
+  0% {
+    margin-top: 0;
+    transform: scale(1) rotateZ(-90deg);
+  }
+  100% {
+    color: #ff1f5a;
+    margin-top: -100px;
+    transform: scale(0) rotateZ(-90deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .collapse navbar-collapse {
+      display: flex;
+      justify-content: center;
+  }
+  .footer {
+      padding-top: 10px;
+  }
+  #navbar-content {
+      margin-top: -200px;
+      height: 120vh;
+      text-align: center;
+      transform: translateY(25%);
+  }
+  #btnScrollToTop {
+      display: none;
+  }
+}
+
+@media (max-width: 414px) {
+  .collapse navbar-collapse {
+      display: flex;
+      justify-content: center;
+  }
+  #navbar-content {
+      margin-top: -180px;
+      height: 120vh;
+      text-align: center;
+      transform: translateY(25%);
+  }
+  #btnScrollToTop {
+      display: none;
+  }
+}
+
+@media (max-width: 375px) {
+  .collapse navbar-collapse {
+      display: flex;
+      justify-content: center;
+  }
+  #navbar-content {
+      margin-top: -180px;
+      height: 120vh;
+      text-align: center;
+      transform: translateY(25%);
+  }
+  #btnScrollToTop {
+      display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .collapse navbar-collapse {
+      display: flex;
+      justify-content: center;
+  }
+  #navbar-content {
+      margin-top: -140px;
+      height: 130vh;
+      text-align: center;
+      transform: translateY(25%);
+  }
+  .footer {
+      margin-top: 6rem;
+  }
+  #btnScrollToTop {
+      display: none;
+  }
+}
+
+
+
+
+
+
+
+#preloader{
+  background: rgb(20, 20, 20) url(pre.gif) no-repeat center center;
+  height: 100vh;
+  width: 100%;
+  z-index: 100;
+  position: fixed;
+}
+
+
+
+
+
+
+
+
+
