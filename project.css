@@ -362,7 +362,7 @@ font-weight: 600;
    }
    .container .products-container .product {
       text-align: center;
-      padding: 0rem 2rem}
+      padding: 2rem 2rem}
 
     .container{
       margin-left: 1%;
@@ -376,7 +376,7 @@ font-weight: 600;
       margin-left: 2px;
  }
  .container .products-container .product .price {
-   font-size: 14px;
+   font-size: 10px;
 }
 .products-preview .preview .buttons a{
    margin-left: -166px;
