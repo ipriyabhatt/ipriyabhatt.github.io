@@ -116,6 +116,7 @@ nav{
 
 #spin {
   color:#4e00bb;
+  font-weight:bold;
 }
 #spin:after {
   content:"";
