@@ -113,6 +113,20 @@ nav{
       color: rgb(196, 196, 196);
     }
   }
+
+#spin {
+  color:#4e00bb;
+}
+#spin:after {
+  content:"";
+  animation: spin 3s linear infinite;
+}
+@keyframes spin {
+  0% { content:"Front end development"; }
+  50% { content:"UI/UX"; }
+  100% { content:"AI and ML"; }
+  
+}
   .text .header {
     font-weight: bold;
   }
