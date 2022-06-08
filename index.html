@@ -19,7 +19,7 @@
 	
 	
 	 <!---Preloader-->
-	
+	 <div id="preloader"></div> 
 	
     
 	<div class="background">
@@ -65,8 +65,6 @@
 	
 	  <!--Content-->
 
-
-
 	  <div class="text col-sm-6" style="margin-top: 140px;">Hi 
 		<span class="wave"><img src="Hand.gif" width="35px"></span>
 		&nbsp;, I'm <span class="header">Priya Bhatt</span>
@@ -75,10 +73,11 @@
 				<img src="main.gif" alt="" class="rounded-circle" height="200" width="200">
 			</div>
 			<br/>
-			
-				<p>I am into <span id="spin"></span></p>
+			<p>I am into <span id="spin"></span></p>
+
 			</span>
 			<div>
+
 
 			<!-- social media -->
 			
@@ -189,6 +188,11 @@
 <script src="cursor.js"></script>
 
 
-
+<script>
+	var loader =document.getElementById("preloader");
+   window.addEventListener("load", function(){
+	 loader.style.display="none";
+   })
+   </script>
 </body>
 </html>
