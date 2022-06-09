@@ -988,3 +988,7 @@ font-weight: 600;
     z-index: 100;
     position: fixed;
   }
+.logo a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
