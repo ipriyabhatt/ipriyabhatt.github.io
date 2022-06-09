@@ -292,6 +292,10 @@ font-weight: 600;
 .products-preview .preview .stars i{
    color:#27ae60;
 }
+.logo a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
 
 .products-preview .preview .stars span{
    color:#999;
