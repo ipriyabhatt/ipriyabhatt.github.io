@@ -552,7 +552,10 @@ margin-left: -45px;}
   }
 
  
-
+.logo a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
  #preloader{
   background: rgb(20, 20, 20) url(pre.gif) no-repeat center center;
   height: 100vh;
